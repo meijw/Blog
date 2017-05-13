@@ -1,13 +1,14 @@
 # Site
 title:              ATERRO
-bio:                'Minimal, one column jekyll theme.'
-description:        "Moon is a minimal, one column jekyll theme for your blog."
+bio:                'Welcome To My Blog.'
+description:        "Though usually reliable,I may let one or two important things slip through my fingers for no apparent reason."
 reading_time:       true
 words_per_minute:   200
-logo:               'assets/img/logo.png'
-background:         'assets/img/placeholder-big.jpg'
-tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
-locale:             Shanghai
+logo:               'assets/img/logo1.png'
+background:         'assets/img/placeholder.jpg'
+tiled_bg:           true   # Set this true if you want to tile your background image, otherwise it will be covered
+locale:             cn
+#url:
 url:                https://meijw.github.io/Blog/
 
 # Jekyll
@@ -37,25 +38,25 @@ disqus_shortname:   aterro
   #ad-client:
   #ad-slot:
 #bing-verify:
-#email:
-twitter:            username
-facebook:           username
-github-url:         username
+email:              aterro@yeah.net
+#twitter:            aterro
+facebook:           meijw.aterro
+github-url:         meijw
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
 #linkedin:          username
 #xing:              username
-instagram:          username
+#instagram:          username
 #lastfm:            username
 #tumblr:            username
 #medium:            '@username'
 #pinterest:         username
 #foursquare:        username
-steam:              username
+#steam:              username
 #dribbble:          username
 #youtube:           username
 #youtube-channel:   channel
 #soundcloud:        username
-#weibo:             username
+weibo:              aterro
 #flickr:            username
 #codepen:           username
 #keybase:           username
