@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://meijw.github.io/Blog//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://meijw.github.io/Blog//feed.xml" rel="self" type="application/atom+xml" /><link href="https://meijw.github.io/Blog//" rel="alternate" type="text/html" /><updated>2017-05-13T16:17:15+08:00</updated><id>https://meijw.github.io/Blog//</id><title type="html">ATERRO</title><subtitle>Though usually reliable,I may let one or two important things slip through my fingers for no apparent reason.</subtitle><entry><title type="html">解决Jekyll无法本地预览中文文件的问题</title><link href="https://meijw.github.io/Blog//%E8%A7%A3%E5%86%B3Jekyll%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/" rel="alternate" type="text/html" title="解决Jekyll无法本地预览中文文件的问题" /><published>2017-05-13T00:00:00+08:00</published><updated>2017-05-13T00:00:00+08:00</updated><id>https://meijw.github.io/Blog//解决Jekyll中文乱码问题</id><content type="html" xml:base="https://meijw.github.io/Blog//%E8%A7%A3%E5%86%B3Jekyll%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/">&lt;p&gt;在使用Jekyll在本地预览自己写的博客无法正常打开，而提交到Github上却可以正常解析。看了一下发现是文件写的博客有什么变化，原来是因为博客的Markdown文件使用了中文文件名，Jekyll无法正常解析出现乱码。
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-05-14T17:51:04+08:00</updated><id>/</id><title type="html">ATERRO</title><subtitle>Though usually reliable,I may let one or two important things slip through my fingers for no apparent reason.</subtitle><entry><title type="html">微信小程序开发环境搭建</title><link href="/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="alternate" type="text/html" title="微信小程序开发环境搭建" /><published>2017-05-14T00:00:00+08:00</published><updated>2017-05-14T00:00:00+08:00</updated><id>/微信小程序环境搭建</id><content type="html" xml:base="/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">&lt;h1 id=&quot;获取微信小程序的-appid&quot;&gt;获取微信小程序的 AppID&lt;/h1&gt;
+&lt;p&gt;登录 https://mp.weixin.qq.com ，就可以在网站的“设置”-“开发者设置”中，查看到微信小程序的 AppID 了，注意不可直接使用服务号或订阅号的 AppID 。&lt;/p&gt;
+
+&lt;h1 id=&quot;小程序开发工具&quot;&gt;小程序开发工具&lt;/h1&gt;
+&lt;p&gt;登录 https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/devtools.html ，下载小程序开发工具。
+&lt;img src=&quot;/assets/img/medias/微信小程序环境搭建/开发工具.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;创建项目&quot;&gt;创建项目&lt;/h1&gt;
+&lt;p&gt;我们需要通过开发者工具，来完成小程序创建和代码编辑。
+&lt;img src=&quot;/assets/img/medias/微信小程序环境搭建/创建项目.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;编写代码&quot;&gt;编写代码&lt;/h1&gt;
+&lt;p&gt;创建小程序实例,点击开发者工具左侧导航的“编辑”，我们可以看到这个项目，已经初始化并包含了一些简单的代码文件。最关键也是必不可少的，是 app.js、app.json、app.wxss 这三个。
+&lt;img src=&quot;/assets/img/medias/微信小程序环境搭建/编写代码.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;手机预览&quot;&gt;手机预览&lt;/h1&gt;
+&lt;p&gt;开发者工具左侧菜单栏选择”项目”，点击”预览”，扫码后即可在微信客户端中体验。
+&lt;img src=&quot;/assets/img/medias/微信小程序环境搭建/预览.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/medias/微信小程序环境搭建/手机预览.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/medias/微信小程序环境搭建/程序后台数据.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/medias/微信小程序环境搭建/手机调试.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><category term="WEIXIN" /><summary type="html">小程序获取AppID、下载开发工具、创建项目、编写代码、手机预览。</summary></entry><entry><title type="html">解决Jekyll无法本地预览中文文件的问题</title><link href="/%E8%A7%A3%E5%86%B3Jekyll%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/" rel="alternate" type="text/html" title="解决Jekyll无法本地预览中文文件的问题" /><published>2017-05-13T00:00:00+08:00</published><updated>2017-05-13T00:00:00+08:00</updated><id>/解决Jekyll中文乱码问题</id><content type="html" xml:base="/%E8%A7%A3%E5%86%B3Jekyll%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/">&lt;p&gt;在使用Jekyll在本地预览自己写的博客无法正常打开，而提交到Github上却可以正常解析。看了一下发现是文件写的博客有什么变化，原来是因为博客的Markdown文件使用了中文文件名，Jekyll无法正常解析出现乱码。
 　　&lt;/p&gt;
 
 &lt;p&gt;解决方法：修改安装目录&lt;strong&gt;\ruby-2.3.3-x64-mingw32\lib\ruby\2.3.0\webrick\httpservlet\filehandler.rb&lt;/strong&gt;文件。&lt;/p&gt;
@@ -21,7 +50,7 @@ break unless File.directory?(File.expand_path(res.filename + base))
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;修改完重新jekyll serve即可支持中文文件名。&lt;/p&gt;</content><category term="jekyll" /><summary type="html">用Jekyll在本地预览自己写的博客无法正常打开，而提交到Github上却可以正常解析。</summary></entry><entry><title type="html">Spring Cloud分布式开发五大神兽</title><link href="https://meijw.github.io/Blog//SpringCloud%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91%E4%BA%94%E5%A4%A7%E7%A5%9E%E5%85%BD/" rel="alternate" type="text/html" title="Spring Cloud分布式开发五大神兽" /><published>2016-01-16T00:00:00+08:00</published><updated>2016-01-16T00:00:00+08:00</updated><id>https://meijw.github.io/Blog//SpringCloud分布式开发五大神兽</id><content type="html" xml:base="https://meijw.github.io/Blog//SpringCloud%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91%E4%BA%94%E5%A4%A7%E7%A5%9E%E5%85%BD/">&lt;h1 id=&quot;spring-cloud分布式开发五大神兽&quot;&gt;Spring Cloud分布式开发五大神兽&lt;/h1&gt;
+&lt;p&gt;修改完重新jekyll serve即可支持中文文件名。&lt;/p&gt;</content><category term="jekyll" /><summary type="html">用Jekyll在本地预览自己写的博客无法正常打开，而提交到Github上却可以正常解析。</summary></entry><entry><title type="html">Spring Cloud分布式开发五大神兽</title><link href="/SpringCloud%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91%E4%BA%94%E5%A4%A7%E7%A5%9E%E5%85%BD/" rel="alternate" type="text/html" title="Spring Cloud分布式开发五大神兽" /><published>2016-01-16T00:00:00+08:00</published><updated>2016-01-16T00:00:00+08:00</updated><id>/SpringCloud分布式开发五大神兽</id><content type="html" xml:base="/SpringCloud%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91%E4%BA%94%E5%A4%A7%E7%A5%9E%E5%85%BD/">&lt;h1 id=&quot;spring-cloud分布式开发五大神兽&quot;&gt;Spring Cloud分布式开发五大神兽&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -43,7 +72,7 @@ break unless File.directory?(File.expand_path(res.filename + base))
 
 &lt;h2 id=&quot;eureka&quot;&gt;Eureka&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/SpringCloud分布式开发五大神兽/29efcd4ec6dcc5c1249ef50115ef5599.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/medias/SpringCloud分布式开发五大神兽/29efcd4ec6dcc5c1249ef50115ef5599.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;一个RESTful服务，用来定位运行在AWS地区（Region）中的中间层服务。由两个组件组成：Eureka服务器和Eureka客户端。Eureka服务器用作服务注册服务器。Eureka客户端是一个&lt;strong&gt;Java&lt;/strong&gt;客户端，用来简化与服务器的交互、作为轮询负载均衡器，并提供服务的故障切换支持。Netflix在其生产环境中使用的是另外的客户端，它提供基于流量、资源利用率以及出错状态的加权负载均衡。&lt;/p&gt;
 
@@ -51,7 +80,7 @@ break unless File.directory?(File.expand_path(res.filename + base))
 
 &lt;p&gt;Ribbon，主要提供客户侧的软件负载均衡&lt;strong&gt;算法&lt;/strong&gt;。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/SpringCloud分布式开发五大神兽/5979736638bbec1fc7d9461e2fa6e802.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/medias/SpringCloud分布式开发五大神兽/5979736638bbec1fc7d9461e2fa6e802.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ribbon客户端组件提供一系列完善的配置选项，比如连接超时、重试、重试算法等。Ribbon内置可插拔、可定制的负载均衡组件。下面是用到的一些负载均衡策略：&lt;/p&gt;
 
@@ -98,30 +127,30 @@ break unless File.directory?(File.expand_path(res.filename + base))
 
 &lt;h2 id=&quot;hystrix&quot;&gt;Hystrix&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/SpringCloud分布式开发五大神兽/36fcd2adc5a8767d6570132454e16a0d.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/medias/SpringCloud分布式开发五大神兽/36fcd2adc5a8767d6570132454e16a0d.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;断路器可以防止一个应用程序多次试图执行一个操作，即很可能失败，允许它继续而不等待故障恢复或者浪费
 CPU
 周期，而它确定该故障是持久的。断路器模式也使应用程序能够检测故障是否已经解决。如果问题似乎已经得到纠正​​，应用程序可以尝试调用操作。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/SpringCloud分布式开发五大神兽/2f5e4e46ca2807e7e89ec1c17b653bea.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/medias/SpringCloud分布式开发五大神兽/2f5e4e46ca2807e7e89ec1c17b653bea.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;断路器增加了稳定性和灵活性，以一个系统，提供稳定性，而系统从故障中恢复，并尽量减少此故障的对性能的影响。它可以帮助快速地拒绝对一个操作，即很可能失败，而不是等待操作超时（或者不返回）的请求，以保持系统的响应时间。如果断路器提高每次改变状态的时间的事件，该信息可以被用来监测由断路器保护系统的部件的健康状况，或以提醒管理员当断路器跳闸，以在打开状态。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/SpringCloud分布式开发五大神兽/f8cdef22d62a66899e3fc40f9bfa5ff2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/medias/SpringCloud分布式开发五大神兽/f8cdef22d62a66899e3fc40f9bfa5ff2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;流程图&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/SpringCloud分布式开发五大神兽/76d1a3b82af1a2fd1a409c672135d294.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/medias/SpringCloud分布式开发五大神兽/76d1a3b82af1a2fd1a409c672135d294.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;zuul&quot;&gt;Zuul&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/SpringCloud分布式开发五大神兽/387e6d0ea41595aacd0a8640d2bdfd40.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/medias/SpringCloud分布式开发五大神兽/387e6d0ea41595aacd0a8640d2bdfd40.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;类似nginx，反向代理的功能，不过netflix自己增加了一些配合其他组件的特性。&lt;/p&gt;
 
 &lt;h2 id=&quot;spring-cloud-config&quot;&gt;Spring Cloud Config&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/SpringCloud分布式开发五大神兽/c16b794e1ed76390b466e25a6eec405b.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/medias/SpringCloud分布式开发五大神兽/c16b794e1ed76390b466e25a6eec405b.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;这个还是静态的，得配合Spring Cloud Bus实现动态的配置更新。&lt;/p&gt;</content><category term="spring cloud" /><summary type="html">服务发现、客户端负载均衡器、断路器、服务网关、分布式配置。</summary></entry></feed>
