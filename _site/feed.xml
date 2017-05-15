@@ -1,4 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://meijw.github.io/Blog//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://meijw.github.io/Blog//feed.xml" rel="self" type="application/atom+xml" /><link href="https://meijw.github.io/Blog//" rel="alternate" type="text/html" /><updated>2017-05-15T20:16:01+08:00</updated><id>https://meijw.github.io/Blog//</id><title type="html">ATERRO</title><subtitle>Though usually reliable,I may let one or two important things slip through my fingers for no apparent reason.</subtitle><entry><title type="html">微信小程序开发环境搭建</title><link href="https://meijw.github.io/Blog//2017/05/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="alternate" type="text/html" title="微信小程序开发环境搭建" /><published>2017-05-14T00:00:00+08:00</published><updated>2017-05-14T00:00:00+08:00</updated><id>https://meijw.github.io/Blog//2017/05/14/微信小程序环境搭建</id><content type="html" xml:base="https://meijw.github.io/Blog//2017/05/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">&lt;h1 id=&quot;获取微信小程序的-appid&quot;&gt;获取微信小程序的 AppID&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://meijw.github.io/Blog//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://meijw.github.io/Blog//feed.xml" rel="self" type="application/atom+xml" /><link href="https://meijw.github.io/Blog//" rel="alternate" type="text/html" /><updated>2017-05-15T20:36:05+08:00</updated><id>https://meijw.github.io/Blog//</id><title type="html">ATERRO</title><subtitle>Though usually reliable,I may let one or two important things slip through my fingers for no apparent reason.</subtitle><entry><title type="html">Spring Cloud Config 加密</title><link href="https://meijw.github.io/Blog//2017/05/15/Spring-Cloud-Config-%E5%8A%A0%E5%AF%86/" rel="alternate" type="text/html" title="Spring Cloud Config 加密" /><published>2017-05-15T00:00:00+08:00</published><updated>2017-05-15T00:00:00+08:00</updated><id>https://meijw.github.io/Blog//2017/05/15/Spring Cloud Config 加密</id><content type="html" xml:base="https://meijw.github.io/Blog//2017/05/15/Spring-Cloud-Config-%E5%8A%A0%E5%AF%86/">&lt;h1 id=&quot;使用情景&quot;&gt;使用情景&lt;/h1&gt;
+
+&lt;p&gt;配置完Spring Cloud Config后所有配置文件存储在Git上（包括密码、账号等）通过查看git就能敏感信息。&lt;/p&gt;
+
+&lt;h1 id=&quot;升级jce环境&quot;&gt;升级JCE环境&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;下载：JAVA8 JCE 地址： &lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html&quot;&gt;java8 JCE下载地址&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;上述链接下载解压后拷贝到 &lt;strong&gt;JDK/jre/lib/security&lt;/strong&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;keystore配置&quot;&gt;KeyStore配置&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;使用keytool生成 KeyStore&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;keytool -genkeypair -alias speed4j-config-server -keyalg RSA -dname “CN=Web Server,OU=Unit,O=Organization,L=City,S=State,C=US” -keypass speed4j -keystore speed4j-config-server.jks -storepass speed4j&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;配置applicationproperties&quot;&gt;配置application.properties&lt;/h1&gt;
+
+&lt;div class=&quot;language-properties highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;py&quot;&gt;encrypt.key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;speed4j&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;encrypt.key-&lt;/span&gt;&lt;span class=&quot;py&quot;&gt;store.location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;speed4j-config-server.jks&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;encrypt.key-&lt;/span&gt;&lt;span class=&quot;py&quot;&gt;store.alias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;speed4j-config-server&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;encrypt.key-&lt;/span&gt;&lt;span class=&quot;py&quot;&gt;store.password&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;speed4j&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;encrypt.key-&lt;/span&gt;&lt;span class=&quot;py&quot;&gt;store.secret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;speed4j&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;开启spring-cloud-server-加密密码&quot;&gt;开启Spring Cloud Server 加密密码&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;访问链接获取加密后的密码（encrypt-password）
+    &lt;blockquote&gt;
+      &lt;p&gt;curl -u [{username}:{password}] {config:host}:{port}/encrypt -d {your-password}&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;如果JCE没有成功安装运行上述命令spring cloud server会报invalid key size的错误（还未下载JCE之前生成的key位数不符合Spring Cloud Config长度限制（太短））&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;获取加密后的密码，在项目的application.properties中修改密码&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;将加密后的密码复制并在前面添加｛cipher｝字段，spring cloud server就知道这是加密的字段
+    &lt;blockquote&gt;
+      &lt;p&gt;datasource.password = {cipher}encrypt-password&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><category term="Spring Cloud" /><category term="Spring Cloud Config" /><summary type="html">配置完Spring Cloud Config后所有配置文件存储在Git上（包括密码、账号等）通过查看git就能敏感信息。</summary></entry><entry><title type="html">微信小程序开发环境搭建</title><link href="https://meijw.github.io/Blog//2017/05/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="alternate" type="text/html" title="微信小程序开发环境搭建" /><published>2017-05-14T00:00:00+08:00</published><updated>2017-05-14T00:00:00+08:00</updated><id>https://meijw.github.io/Blog//2017/05/14/微信小程序环境搭建</id><content type="html" xml:base="https://meijw.github.io/Blog//2017/05/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">&lt;h1 id=&quot;获取微信小程序的-appid&quot;&gt;获取微信小程序的 AppID&lt;/h1&gt;
 &lt;p&gt;登录 https://mp.weixin.qq.com ，就可以在网站的“设置”-“开发者设置”中，查看到微信小程序的 AppID 了，注意不可直接使用服务号或订阅号的 AppID 。&lt;/p&gt;
 
 &lt;h1 id=&quot;小程序开发工具&quot;&gt;小程序开发工具&lt;/h1&gt;
@@ -57,7 +111,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;修改完重新jekyll serve即可支持中文文件名。&lt;/p&gt;</content><category term="jekyll" /><summary type="html">用Jekyll在本地预览自己写的博客无法正常打开，而提交到Github上却可以正常解析。</summary></entry><entry><title type="html">Spring Cloud分布式开发五大神兽</title><link href="https://meijw.github.io/Blog//2016/01/16/SpringCloud%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91%E4%BA%94%E5%A4%A7%E7%A5%9E%E5%85%BD/" rel="alternate" type="text/html" title="Spring Cloud分布式开发五大神兽" /><published>2016-01-16T00:00:00+08:00</published><updated>2016-01-16T00:00:00+08:00</updated><id>https://meijw.github.io/Blog//2016/01/16/SpringCloud分布式开发五大神兽</id><content type="html" xml:base="https://meijw.github.io/Blog//2016/01/16/SpringCloud%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91%E4%BA%94%E5%A4%A7%E7%A5%9E%E5%85%BD/">&lt;hr /&gt;
+&lt;p&gt;修改完重新jekyll serve即可支持中文文件名。&lt;/p&gt;</content><category term="jekyll" /><summary type="html">用Jekyll在本地预览自己写的博客无法正常打开，而提交到Github上却可以正常解析。</summary></entry><entry><title type="html">Spring Cloud分布式开发五大神兽</title><link href="https://meijw.github.io/Blog//2016/01/16/Spring-Cloud%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91%E4%BA%94%E5%A4%A7%E7%A5%9E%E5%85%BD/" rel="alternate" type="text/html" title="Spring Cloud分布式开发五大神兽" /><published>2016-01-16T00:00:00+08:00</published><updated>2016-01-16T00:00:00+08:00</updated><id>https://meijw.github.io/Blog//2016/01/16/Spring Cloud分布式开发五大神兽</id><content type="html" xml:base="https://meijw.github.io/Blog//2016/01/16/Spring-Cloud%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91%E4%BA%94%E5%A4%A7%E7%A5%9E%E5%85%BD/">&lt;hr /&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#spring-cloud分布式开发五大神兽&quot; id=&quot;markdown-toc-spring-cloud分布式开发五大神兽&quot;&gt;Spring Cloud分布式开发五大神兽&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#eureka&quot; id=&quot;markdown-toc-eureka&quot;&gt;Eureka&lt;/a&gt;&lt;/li&gt;
