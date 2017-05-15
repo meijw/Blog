@@ -3,9 +3,16 @@ layout: post
 title:  "Spring Cloud分布式开发五大神兽"
 excerpt: "服务发现、客户端负载均衡器、断路器、服务网关、分布式配置。"
 date:   2016-01-16
+categories: Spring Cloud
 tag:
 - spring cloud 
 comments: true
+---
+
+---
+* content
+{:toc}
+
 ---
 
 # Spring Cloud分布式开发五大神兽

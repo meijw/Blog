@@ -12,7 +12,7 @@ locale:             cn
 url:                https://meijw.github.io/Blog/
 
 # Jekyll
-permalink:          /:title/
+permalink:	    /:year/:month/:day/:title/
 markdown:           kramdown
 highlighter:        rouge
 kramdown:
