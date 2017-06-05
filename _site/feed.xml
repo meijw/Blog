@@ -1,4 +1,84 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://meijw.github.io/Blog//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://meijw.github.io/Blog//feed.xml" rel="self" type="application/atom+xml" /><link href="https://meijw.github.io/Blog//" rel="alternate" type="text/html" /><updated>2017-05-17T23:50:05+08:00</updated><id>https://meijw.github.io/Blog//</id><title type="html">ATERRO</title><subtitle>Though usually reliable,I may let one or two important things slip through my fingers for no apparent reason.</subtitle><entry><title type="html">Spring MVC 之获取请求参数</title><link href="https://meijw.github.io/Blog//2017/05/16/Spring-MVC%E4%B9%8B%E8%8E%B7%E5%8F%96%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/" rel="alternate" type="text/html" title="Spring MVC 之获取请求参数" /><published>2017-05-16T00:00:00+08:00</published><updated>2017-05-16T00:00:00+08:00</updated><id>https://meijw.github.io/Blog//2017/05/16/Spring MVC之获取请求参数</id><content type="html" xml:base="https://meijw.github.io/Blog//2017/05/16/Spring-MVC%E4%B9%8B%E8%8E%B7%E5%8F%96%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-06-05T13:57:15+08:00</updated><id>/</id><title type="html">ATERRO</title><subtitle>Though usually reliable,I may let one or two important things slip through my fingers for no apparent reason.</subtitle><entry><title type="html">简述 Microservices</title><link href="/2017/06/05/%E7%AE%80%E8%BF%B0Microservices/" rel="alternate" type="text/html" title="简述 Microservices" /><published>2017-06-05T00:00:00+08:00</published><updated>2017-06-05T00:00:00+08:00</updated><id>/2017/06/05/简述Microservices</id><content type="html" xml:base="/2017/06/05/%E7%AE%80%E8%BF%B0Microservices/">&lt;hr /&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#简述-microservices&quot; id=&quot;markdown-toc-简述-microservices&quot;&gt;简述 Microservices&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#什么是-microservices&quot; id=&quot;markdown-toc-什么是-microservices&quot;&gt;什么是 Microservices&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#microservices-包含如下特征&quot; id=&quot;markdown-toc-microservices-包含如下特征&quot;&gt;Microservices 包含如下特征：&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#msa-vs-soa&quot; id=&quot;markdown-toc-msa-vs-soa&quot;&gt;MSA vs. SOA&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#何时采用-microservices&quot; id=&quot;markdown-toc-何时采用-microservices&quot;&gt;何时采用 Microservices&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#参考&quot; id=&quot;markdown-toc-参考&quot;&gt;参考&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;简述-microservices&quot;&gt;简述 Microservices&lt;/h1&gt;
+
+&lt;p&gt;自2014年始，Microservices（微服务）一词越来越火爆。那什么是 Microservices？Microservices 架构与传统的架构有什么区别？何时应该采用 Microservices？&lt;/p&gt;
+
+&lt;p&gt;本文，就针对上述提到的问题，来简单介绍下 Microservices。&lt;/p&gt;
+
+&lt;h2 id=&quot;什么是-microservices&quot;&gt;什么是 Microservices&lt;/h2&gt;
+
+&lt;p&gt;微服务的诞生并非偶然: 领域驱动设计指导我们如何分析并模型化复杂的业务；敏捷方法论帮助我们消除浪费，快速反馈；持续交付促使我们构建更快、更可靠、更频繁的软件部署和交付能力；虚拟化和基础设施自动化(Infrastructure As Code)则帮助我们简化环境的创建、安装；DevOps 文化的流行以及特性团队的出现，使得小团队更加全功能化。这些都是推动微服务诞生的重要因素。&lt;/p&gt;
+
+&lt;p&gt;实际上，业界对于微服务本身并没有一个严格的定义。James Lewis 和 Martin Fowler 对 Microservices 架构做了如下定义：&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;简言之，Microservices 架构风格就像是把小的服务开发成单一应用的形式， 运行在其自己的进程中，并采用轻量级的机制进行通信（一般是 HTTP 资源 API）。这些服务都是围绕业务能力来构建，通过全自动部署工具来实现独立部署。这些服务，其可以使用不同的编程语言和不同的数据存储技术，并保持最小化集中管理。&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;microservices-包含如下特征&quot;&gt;Microservices 包含如下特征：&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;组件以服务形式来提供：&lt;/strong&gt; 正如其名，微服务也是面向服务的。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;围绕业务功能进行组织：&lt;/strong&gt; 微服务更倾向于围绕业务功能对服务结构进行划分、拆解。这样的服务，是针对业务领域有着关完整实现的软件，它包含使用接口、持久存储、以及对应的交互。因此团队应该是跨职能的，包含完整的开发技术：用户体验、数据库、以及项目管理。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;产品不是项目：&lt;/strong&gt; 传统的开发模式，是至力于提供一些被认为是完整的软件。一旦开发完成，软件将移交给维护或者实施部门，然后，开发组就可以解散掉了。而微服务要求开发团队对软件产品的整个生命周期负责。这要求开发者每天都关注软件产品的运行情况，并与用户联系的更紧密，同时承担一些售后支持。越小的服务粒度越容易促进用户与服务提供商之前的关系。Amazon 的理念就是“You build, you run it”，这也正是 DevOps 的文化理念。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;强化终端及弱化通道：&lt;/strong&gt; 微服务的应用致力松耦合和高内聚，它们更喜欢简单的REST 风格，而不是复杂的协议（如WS或者BPEL或者集中式框架）。或者采用轻量级消息总线（如 RabbitMQ 或 ZeroMQ 等）来发布消息。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;分散治理：&lt;/strong&gt; 这是跟传统的集中式管理很大区别的地方。微服务把整体式框架中的组件，拆分成不同的服务，在构建它们时将会有更多的选择。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;分散数据管理：&lt;/strong&gt; 当整体式的应用使用单一逻辑数据库对数据持久化时，企业通常选择在应用的范围内使用一个数据库。微服务让每个服务管理自己的数据库：无论是相同数据库的不同实例，或者是不同的数据库系统。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;基础设施自动化：&lt;/strong&gt; 云计算，特别是 AWS 的发展，减少了构建、发布、运维微服务的复杂性。微服务的团队更加依赖于基础设施的自动化，毕竟发布工作相当的无趣。近些年开始火爆的 Docker 也是一个不错的选择。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;容错性设计：&lt;/strong&gt; 任务服务都可能因为供应商的不可靠而故障。微服务应为每个应用的服务及数据中心提供日常故障检测和恢复。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;改进设计：&lt;/strong&gt; 由于设计会不断更改，微服务所提供的服务应该能够替换或者报废，而不是要长久的发展的。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;msa-vs-soa&quot;&gt;MSA vs. SOA&lt;/h2&gt;
+
+&lt;p&gt;微服务架构（MSA）与 面向服务架构（SOA）相似之处，比如，都是面向服务。通常 SOA 意味着大而全的整体单块架构系统(monolithic)的解决方案。这让设计、开发、测试、发布都增加了难度，其中任何细小的代码变更，都将导致整个系统的需要重新测试，部署。而微服务架构恰恰把所有服务都打散，设置合理的颗粒度，各个服务间保持低耦合，每个服务都在其完整的生命周期中存活，互相之间影响降到最低。&lt;/p&gt;
+
+&lt;p&gt;SOA 需要对整个系统进行规范，而 MSA 每个服务都可以有自己的开发语言、开发方式，灵活性大大提高。&lt;/p&gt;
+
+&lt;h2 id=&quot;何时采用-microservices&quot;&gt;何时采用 Microservices&lt;/h2&gt;
+
+&lt;p&gt;对于分布式设计来说，分布式第一定律是“尽量不要使用分布式”。因为系统的分布式一定会带来性能的开销。&lt;/p&gt;
+
+&lt;p&gt;微服务使得开发变得更简单，快捷了。以前开发人员耗费时间来搭建环境、熟悉代码结构，在微服务的世界里会简单许多。但是，微服务带来了一系列的非功能性需求，比如说事务、服务治理（注册，发现，负载，路由，认证授权，隔离）、监控（日志，性能监控，告警，调用链路）、部署、测试等。微服务依赖于“基础设施自动化”。&lt;/p&gt;
+
+&lt;p&gt;微服务不是“银弹”，何时采用微服务还需考虑企业自身的需求。&lt;/p&gt;
+
+&lt;h2 id=&quot;参考&quot;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;http://www.infoq.com/cn/articles/enterprise-core-systems-transformation-practice/&lt;/li&gt;
+  &lt;li&gt;http://martinfowler.com/articles/microservices.html&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Microservices" /><summary type="html">自2014年始，Microservices（微服务）一词越来越火爆。那什么是 Microservices？Microservices 架构与传统的架构有什么区别？何时应该采用 Microservices？</summary></entry><entry><title type="html">Spring MVC 之获取请求参数</title><link href="/2017/05/16/Spring-MVC%E4%B9%8B%E8%8E%B7%E5%8F%96%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/" rel="alternate" type="text/html" title="Spring MVC 之获取请求参数" /><published>2017-05-16T00:00:00+08:00</published><updated>2017-05-16T00:00:00+08:00</updated><id>/2017/05/16/Spring MVC之获取请求参数</id><content type="html" xml:base="/2017/05/16/Spring-MVC%E4%B9%8B%E8%8E%B7%E5%8F%96%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/">&lt;hr /&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#spring-mvc-获取请求参数&quot; id=&quot;markdown-toc-spring-mvc-获取请求参数&quot;&gt;Spring MVC (获取请求参数)&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#一spring-mvc如何匹配请求路径&quot; id=&quot;markdown-toc-一spring-mvc如何匹配请求路径&quot;&gt;一、Spring MVC如何匹配请求路径&lt;/a&gt;&lt;/li&gt;
@@ -198,7 +278,7 @@
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;springmvc/testCookieValue&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;testCookieValue&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;　　这样我们就可以得到类似“testCookieValue: 1410F05C9ADD84E8659C2AC79E8CC666”这样的结果。&lt;/p&gt;</content><category term="Spring MVC" /><summary type="html">Spring MVC匹配请求路径，获取请求的参数。</summary></entry><entry><title type="html">Spring Cloud Config 加密</title><link href="https://meijw.github.io/Blog//2017/05/15/Spring-Cloud-Config-%E5%8A%A0%E5%AF%86/" rel="alternate" type="text/html" title="Spring Cloud Config 加密" /><published>2017-05-15T00:00:00+08:00</published><updated>2017-05-15T00:00:00+08:00</updated><id>https://meijw.github.io/Blog//2017/05/15/Spring Cloud Config 加密</id><content type="html" xml:base="https://meijw.github.io/Blog//2017/05/15/Spring-Cloud-Config-%E5%8A%A0%E5%AF%86/">&lt;h1 id=&quot;使用情景&quot;&gt;使用情景&lt;/h1&gt;
+&lt;p&gt;　　这样我们就可以得到类似“testCookieValue: 1410F05C9ADD84E8659C2AC79E8CC666”这样的结果。&lt;/p&gt;</content><category term="Spring MVC" /><summary type="html">Spring MVC匹配请求路径，获取请求的参数。</summary></entry><entry><title type="html">Spring Cloud Config 加密</title><link href="/2017/05/15/Spring-Cloud-Config-%E5%8A%A0%E5%AF%86/" rel="alternate" type="text/html" title="Spring Cloud Config 加密" /><published>2017-05-15T00:00:00+08:00</published><updated>2017-05-15T00:00:00+08:00</updated><id>/2017/05/15/Spring Cloud Config 加密</id><content type="html" xml:base="/2017/05/15/Spring-Cloud-Config-%E5%8A%A0%E5%AF%86/">&lt;h1 id=&quot;使用情景&quot;&gt;使用情景&lt;/h1&gt;
 
 &lt;p&gt;配置完Spring Cloud Config后所有配置文件存储在Git上（包括密码、账号等）通过查看git就能敏感信息。&lt;/p&gt;
 
@@ -252,24 +332,24 @@
       &lt;p&gt;datasource.password = {cipher}encrypt-password&lt;/p&gt;
     &lt;/blockquote&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><category term="Spring Cloud" /><category term="Spring Cloud Config" /><summary type="html">配置完Spring Cloud Config后所有配置文件存储在Git上（包括密码、账号等）通过查看git就能敏感信息。</summary></entry><entry><title type="html">微信小程序开发环境搭建</title><link href="https://meijw.github.io/Blog//2017/05/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="alternate" type="text/html" title="微信小程序开发环境搭建" /><published>2017-05-14T00:00:00+08:00</published><updated>2017-05-14T00:00:00+08:00</updated><id>https://meijw.github.io/Blog//2017/05/14/微信小程序环境搭建</id><content type="html" xml:base="https://meijw.github.io/Blog//2017/05/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">&lt;h1 id=&quot;获取微信小程序的-appid&quot;&gt;获取微信小程序的 AppID&lt;/h1&gt;
+&lt;/ol&gt;</content><category term="Spring Cloud" /><category term="Spring Cloud Config" /><summary type="html">配置完Spring Cloud Config后所有配置文件存储在Git上（包括密码、账号等）通过查看git就能敏感信息。</summary></entry><entry><title type="html">微信小程序开发环境搭建</title><link href="/2017/05/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="alternate" type="text/html" title="微信小程序开发环境搭建" /><published>2017-05-14T00:00:00+08:00</published><updated>2017-05-14T00:00:00+08:00</updated><id>/2017/05/14/微信小程序环境搭建</id><content type="html" xml:base="/2017/05/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">&lt;h1 id=&quot;获取微信小程序的-appid&quot;&gt;获取微信小程序的 AppID&lt;/h1&gt;
 &lt;p&gt;登录 https://mp.weixin.qq.com ，就可以在网站的“设置”-“开发者设置”中，查看到微信小程序的 AppID 了，注意不可直接使用服务号或订阅号的 AppID 。&lt;/p&gt;
 
 &lt;h1 id=&quot;小程序开发工具&quot;&gt;小程序开发工具&lt;/h1&gt;
 &lt;p&gt;登录 https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/devtools.html ，下载小程序开发工具。
-&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/微信小程序环境搭建/开发工具.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/img/medias/微信小程序环境搭建/开发工具.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;创建项目&quot;&gt;创建项目&lt;/h1&gt;
 &lt;p&gt;我们需要通过开发者工具，来完成小程序创建和代码编辑。
-&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/微信小程序环境搭建/创建项目.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/img/medias/微信小程序环境搭建/创建项目.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;编写代码&quot;&gt;编写代码&lt;/h1&gt;
 &lt;p&gt;创建小程序实例,点击开发者工具左侧导航的“编辑”，我们可以看到这个项目，已经初始化并包含了一些简单的代码文件。最关键也是必不可少的，是 app.js、app.json、app.wxss 这三个。
-&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/微信小程序环境搭建/编写代码.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/img/medias/微信小程序环境搭建/编写代码.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;手机预览&quot;&gt;手机预览&lt;/h1&gt;
 &lt;p&gt;开发者工具左侧菜单栏选择”项目”，点击”预览”，扫码后即可在微信客户端中体验。
-&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/微信小程序环境搭建/预览.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/img/medias/微信小程序环境搭建/预览.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -283,12 +363,12 @@
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/微信小程序环境搭建/手机预览.jpg&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/微信小程序环境搭建/程序后台数据.jpg&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/微信小程序环境搭建/手机调试.jpg&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/medias/微信小程序环境搭建/手机预览.jpg&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/medias/微信小程序环境搭建/程序后台数据.jpg&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/medias/微信小程序环境搭建/手机调试.jpg&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</content><category term="WeiXin" /><summary type="html">小程序获取AppID、下载开发工具、创建项目、编写代码、手机预览。</summary></entry><entry><title type="html">解决Jekyll无法本地预览中文文件的问题</title><link href="https://meijw.github.io/Blog//2017/05/13/%E8%A7%A3%E5%86%B3Jekyll%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/" rel="alternate" type="text/html" title="解决Jekyll无法本地预览中文文件的问题" /><published>2017-05-13T00:00:00+08:00</published><updated>2017-05-13T00:00:00+08:00</updated><id>https://meijw.github.io/Blog//2017/05/13/解决Jekyll中文乱码问题</id><content type="html" xml:base="https://meijw.github.io/Blog//2017/05/13/%E8%A7%A3%E5%86%B3Jekyll%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/">&lt;p&gt;在使用Jekyll在本地预览自己写的博客无法正常打开，而提交到Github上却可以正常解析。看了一下发现是文件写的博客有什么变化，原来是因为博客的Markdown文件使用了中文文件名，Jekyll无法正常解析出现乱码。&lt;/p&gt;
+&lt;/table&gt;</content><category term="WeiXin" /><summary type="html">小程序获取AppID、下载开发工具、创建项目、编写代码、手机预览。</summary></entry><entry><title type="html">解决Jekyll无法本地预览中文文件的问题</title><link href="/2017/05/13/%E8%A7%A3%E5%86%B3Jekyll%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/" rel="alternate" type="text/html" title="解决Jekyll无法本地预览中文文件的问题" /><published>2017-05-13T00:00:00+08:00</published><updated>2017-05-13T00:00:00+08:00</updated><id>/2017/05/13/解决Jekyll中文乱码问题</id><content type="html" xml:base="/2017/05/13/%E8%A7%A3%E5%86%B3Jekyll%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/">&lt;p&gt;在使用Jekyll在本地预览自己写的博客无法正常打开，而提交到Github上却可以正常解析。看了一下发现是文件写的博客有什么变化，原来是因为博客的Markdown文件使用了中文文件名，Jekyll无法正常解析出现乱码。&lt;/p&gt;
 
 &lt;p&gt;解决方法：修改安装目录文件&lt;/p&gt;
 &lt;blockquote&gt;
@@ -311,7 +391,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;修改完重新jekyll serve即可支持中文文件名。&lt;/p&gt;</content><category term="Jekyll" /><summary type="html">用Jekyll在本地预览自己写的博客无法正常打开，而提交到Github上却可以正常解析。</summary></entry><entry><title type="html">Spring Cloud分布式开发五大神兽</title><link href="https://meijw.github.io/Blog//2016/01/16/Spring-Cloud%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91%E4%BA%94%E5%A4%A7%E7%A5%9E%E5%85%BD/" rel="alternate" type="text/html" title="Spring Cloud分布式开发五大神兽" /><published>2016-01-16T00:00:00+08:00</published><updated>2016-01-16T00:00:00+08:00</updated><id>https://meijw.github.io/Blog//2016/01/16/Spring Cloud分布式开发五大神兽</id><content type="html" xml:base="https://meijw.github.io/Blog//2016/01/16/Spring-Cloud%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91%E4%BA%94%E5%A4%A7%E7%A5%9E%E5%85%BD/">&lt;hr /&gt;
+&lt;p&gt;修改完重新jekyll serve即可支持中文文件名。&lt;/p&gt;</content><category term="Jekyll" /><summary type="html">用Jekyll在本地预览自己写的博客无法正常打开，而提交到Github上却可以正常解析。</summary></entry><entry><title type="html">Spring Cloud分布式开发五大神兽</title><link href="/2016/01/16/Spring-Cloud%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91%E4%BA%94%E5%A4%A7%E7%A5%9E%E5%85%BD/" rel="alternate" type="text/html" title="Spring Cloud分布式开发五大神兽" /><published>2016-01-16T00:00:00+08:00</published><updated>2016-01-16T00:00:00+08:00</updated><id>/2016/01/16/Spring Cloud分布式开发五大神兽</id><content type="html" xml:base="/2016/01/16/Spring-Cloud%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91%E4%BA%94%E5%A4%A7%E7%A5%9E%E5%85%BD/">&lt;hr /&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#spring-cloud分布式开发五大神兽&quot; id=&quot;markdown-toc-spring-cloud分布式开发五大神兽&quot;&gt;Spring Cloud分布式开发五大神兽&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#eureka&quot; id=&quot;markdown-toc-eureka&quot;&gt;Eureka&lt;/a&gt;&lt;/li&gt;
@@ -347,7 +427,7 @@
 
 &lt;h2 id=&quot;eureka&quot;&gt;Eureka&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/SpringCloud分布式开发五大神兽/29efcd4ec6dcc5c1249ef50115ef5599.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/medias/SpringCloud分布式开发五大神兽/29efcd4ec6dcc5c1249ef50115ef5599.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;一个RESTful服务，用来定位运行在AWS地区（Region）中的中间层服务。由两个组件组成：Eureka服务器和Eureka客户端。Eureka服务器用作服务注册服务器。Eureka客户端是一个&lt;strong&gt;Java&lt;/strong&gt;客户端，用来简化与服务器的交互、作为轮询负载均衡器，并提供服务的故障切换支持。Netflix在其生产环境中使用的是另外的客户端，它提供基于流量、资源利用率以及出错状态的加权负载均衡。&lt;/p&gt;
 
@@ -355,7 +435,7 @@
 
 &lt;p&gt;Ribbon，主要提供客户侧的软件负载均衡&lt;strong&gt;算法&lt;/strong&gt;。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/SpringCloud分布式开发五大神兽/5979736638bbec1fc7d9461e2fa6e802.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/medias/SpringCloud分布式开发五大神兽/5979736638bbec1fc7d9461e2fa6e802.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ribbon客户端组件提供一系列完善的配置选项，比如连接超时、重试、重试算法等。Ribbon内置可插拔、可定制的负载均衡组件。下面是用到的一些负载均衡策略：&lt;/p&gt;
 
@@ -402,33 +482,33 @@
 
 &lt;h2 id=&quot;hystrix&quot;&gt;Hystrix&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/SpringCloud分布式开发五大神兽/36fcd2adc5a8767d6570132454e16a0d.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/medias/SpringCloud分布式开发五大神兽/36fcd2adc5a8767d6570132454e16a0d.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;断路器可以防止一个应用程序多次试图执行一个操作，即很可能失败，允许它继续而不等待故障恢复或者浪费
 CPU
 周期，而它确定该故障是持久的。断路器模式也使应用程序能够检测故障是否已经解决。如果问题似乎已经得到纠正​​，应用程序可以尝试调用操作。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/SpringCloud分布式开发五大神兽/2f5e4e46ca2807e7e89ec1c17b653bea.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/medias/SpringCloud分布式开发五大神兽/2f5e4e46ca2807e7e89ec1c17b653bea.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;断路器增加了稳定性和灵活性，以一个系统，提供稳定性，而系统从故障中恢复，并尽量减少此故障的对性能的影响。它可以帮助快速地拒绝对一个操作，即很可能失败，而不是等待操作超时（或者不返回）的请求，以保持系统的响应时间。如果断路器提高每次改变状态的时间的事件，该信息可以被用来监测由断路器保护系统的部件的健康状况，或以提醒管理员当断路器跳闸，以在打开状态。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/SpringCloud分布式开发五大神兽/f8cdef22d62a66899e3fc40f9bfa5ff2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/medias/SpringCloud分布式开发五大神兽/f8cdef22d62a66899e3fc40f9bfa5ff2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;流程图&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/SpringCloud分布式开发五大神兽/76d1a3b82af1a2fd1a409c672135d294.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/medias/SpringCloud分布式开发五大神兽/76d1a3b82af1a2fd1a409c672135d294.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;zuul&quot;&gt;Zuul&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/SpringCloud分布式开发五大神兽/387e6d0ea41595aacd0a8640d2bdfd40.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/medias/SpringCloud分布式开发五大神兽/387e6d0ea41595aacd0a8640d2bdfd40.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;类似nginx，反向代理的功能，不过netflix自己增加了一些配合其他组件的特性。&lt;/p&gt;
 
 &lt;h2 id=&quot;spring-cloud-config&quot;&gt;Spring Cloud Config&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://meijw.github.io/Blog//assets/img/medias/SpringCloud分布式开发五大神兽/c16b794e1ed76390b466e25a6eec405b.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/medias/SpringCloud分布式开发五大神兽/c16b794e1ed76390b466e25a6eec405b.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;这个还是静态的，得配合Spring Cloud Bus实现动态的配置更新。&lt;/p&gt;</content><category term="Spring Cloud" /><summary type="html">服务发现、客户端负载均衡器、断路器、服务网关、分布式配置。</summary></entry><entry><title type="html">Java反射机制</title><link href="https://meijw.github.io/Blog//2015/04/01/Java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/" rel="alternate" type="text/html" title="Java反射机制" /><published>2015-04-01T00:00:00+08:00</published><updated>2015-04-01T00:00:00+08:00</updated><id>https://meijw.github.io/Blog//2015/04/01/Java反射机制</id><content type="html" xml:base="https://meijw.github.io/Blog//2015/04/01/Java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/">&lt;hr /&gt;
+&lt;p&gt;这个还是静态的，得配合Spring Cloud Bus实现动态的配置更新。&lt;/p&gt;</content><category term="Spring Cloud" /><summary type="html">服务发现、客户端负载均衡器、断路器、服务网关、分布式配置。</summary></entry><entry><title type="html">Java反射机制</title><link href="/2015/04/01/Java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/" rel="alternate" type="text/html" title="Java反射机制" /><published>2015-04-01T00:00:00+08:00</published><updated>2015-04-01T00:00:00+08:00</updated><id>/2015/04/01/Java反射机制</id><content type="html" xml:base="/2015/04/01/Java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/">&lt;hr /&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#引言&quot; id=&quot;markdown-toc-引言&quot;&gt;引言&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#反射基础&quot; id=&quot;markdown-toc-反射基础&quot;&gt;反射基础&lt;/a&gt;    &lt;ul&gt;
@@ -928,7 +1008,7 @@ public @interface UserCase {
 	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><category term="Java" /><summary type="html">Java反射机制是一个非常强大的功能，在很多大型项目比如Spring, Mybatis中都可以看见反射的身影。</summary></entry><entry><title type="html">静态分析工具PMD</title><link href="https://meijw.github.io/Blog//2015/03/31/%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7PMD%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/" rel="alternate" type="text/html" title="静态分析工具PMD" /><published>2015-03-31T00:00:00+08:00</published><updated>2015-03-31T00:00:00+08:00</updated><id>https://meijw.github.io/Blog//2015/03/31/静态分析工具PMD使用说明</id><content type="html" xml:base="https://meijw.github.io/Blog//2015/03/31/%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7PMD%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">&lt;hr /&gt;
+&lt;/div&gt;</content><category term="Java" /><summary type="html">Java反射机制是一个非常强大的功能，在很多大型项目比如Spring, Mybatis中都可以看见反射的身影。</summary></entry><entry><title type="html">静态分析工具PMD</title><link href="/2015/03/31/%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7PMD%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/" rel="alternate" type="text/html" title="静态分析工具PMD" /><published>2015-03-31T00:00:00+08:00</published><updated>2015-03-31T00:00:00+08:00</updated><id>/2015/03/31/静态分析工具PMD使用说明</id><content type="html" xml:base="/2015/03/31/%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7PMD%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">&lt;hr /&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#1-使用背景&quot; id=&quot;markdown-toc-1-使用背景&quot;&gt;1 使用背景&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#2-pmd-简介&quot; id=&quot;markdown-toc-2-pmd-简介&quot;&gt;2. PMD 简介&lt;/a&gt;&lt;/li&gt;
