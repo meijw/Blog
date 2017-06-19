@@ -3,7 +3,7 @@ layout: post
 title:  "简述 Microservices"
 excerpt: "自2014年始，Microservices（微服务）一词越来越火爆。那什么是 Microservices？Microservices 架构与传统的架构有什么区别？何时应该采用 Microservices？"
 date:   2017-06-05
-categories: Microservices
+categories: MicroServices
 tag:
 - Microservices
 comments: false

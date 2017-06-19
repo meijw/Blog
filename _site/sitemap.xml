@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>/2017/06/05/%E7%AE%80%E8%BF%B0Microservices/</loc>
+<loc>/2017/06/08/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Flyway-%E6%A6%82%E5%BF%B5%E7%AF%87/</loc>
+<lastmod>2017-06-08T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/2017/06/08/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Flyway-%E5%AE%9E%E6%88%98%E7%AF%87/</loc>
+<lastmod>2017-06-08T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/2017/06/05/%E7%AE%80%E8%BF%B0MicroServices/</loc>
 <lastmod>2017-06-05T00:00:00+08:00</lastmod>
 </url>
 <url>
