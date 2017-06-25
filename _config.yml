@@ -8,8 +8,8 @@ logo:               'assets/img/logo1.png'
 background:         'assets/img/placeholder.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             cn
-url:
-# url:                https://meijw.github.io/Blog/
+# url:
+url:                https://meijw.github.io/Blog/
 
 # Jekyll
 permalink:	    /:year/:month/:day/:title/
