@@ -1,3 +1,4 @@
 _posts
 .sass-cache/
 .jekyll-metadata
+vendor/bundle
